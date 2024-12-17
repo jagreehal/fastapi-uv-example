@@ -1,0 +1,30 @@
+
+@port = {{$dotenv PORT}}
+
+### GET all todos
+GET http://localhost:{{port}}/
+
+
+### POST a new todo
+POST http://localhost:{{port}}/
+Content-Type: application/json
+
+{
+  "name": "Buy groceries",
+  "completed": false
+}
+
+### GET a specific todo by ID
+GET http://localhost:{{port}}/1
+
+### PUT update a specific todo by ID
+PUT http://localhost:{{port}}/1
+Content-Type: application/json
+
+{
+  "name": "Buy groceries",
+  "completed": true
+}
+
+### DELETE a specific todo by ID
+DELETE http://localhost:{{port}}/1
